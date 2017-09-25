@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{% block pageTitle %}{% endblock %}</title>
+
+  <!-- Stylesheets -->
+  {% include "stylesheets.twig" %}
+</head>
+<body>
+<div class="app-wrapper">
+  <!-- Header block -->
+  {% include "header.twig" %}
+  <!-- Header block end -->
+
+  <!-- Block content -->
+  {% block content %}{% endblock %}
+  <!-- Block content end -->
+
+  <!-- Footer block -->
+  {% include "footer.twig" %}
+  <!-- Footer block end -->
+
+  <div class="popup-wrapper js-popup" data-popup="mobile-menu">
+    <div class="popup mobile-menu">
+      <ul class="mobile-menu__list fw-text-center">
+        <li class="mobile-menu__item"><a class="mobile-menu__link" href="#">ENG</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__link" href="#">CN</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  {% include "scripts.twig" %}
+</div>
+</body>
+</html>

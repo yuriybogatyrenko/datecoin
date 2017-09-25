@@ -1,0 +1,255 @@
+html, body
+  margin: 0
+  height: 100%
+
+body
+  background-color: #000
+  color: #fff
+  font-family: Roboto, sans-serif, arial
+  font-weight: 500
+  line-height: 1.34
+  font-size: 14px
+
+html.popup-opened
+  overflow: hidden
+
+.app-wrapper
+  height: 100%
+  display: flex
+  flex-direction: column
+  background: url(../images/main-background-image.png) no-repeat 80% center / 614px auto
+
+.container
+  max-width: 1140px
+  margin-left: auto
+  margin-right: auto
+  padding-left: 15px
+  padding-right: 15px
+
+.header
+  padding: 35px 0
+
+.header__logo-soon
+  font-size: 19px
+  line-height: 2.42
+  letter-spacing: 1.1px
+  text-align: left
+  color: #ffffff
+  font-weight: 300
+
+.header-langs__mobile-active
+  display: none
+
+  @media screen and (max-width: 767px)
+    display: block
+
+.header__langs-item
+  display: inline-block
+  vertical-align: middle
+
+  &:not(:last-child)
+    margin-right: 30px
+
+.header__langs-link
+  color: #fff
+  text-decoration: none
+  position: relative
+
+  &.active
+    opacity: 0.4
+
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      top: 100%
+      margin-top: 5px
+      width: 100%
+      height: 2px
+      background-color: #fff
+
+.content-area
+  padding: 35px 0 60px
+  margin-top: auto
+  margin-bottom: auto
+
+.content-area__title
+  font-weight: 300
+  letter-spacing: 1.5px
+  margin: 0 0 70px
+
+.content-area__inner
+  max-width: 630px
+
+.form__field
+  display: flex
+  align-items: center
+
+.form-title
+  font-weight: 500
+
+.form-input
+  width: 250px
+  height: 44px
+  border-radius: 5px 0 0 5px
+  border: none
+  padding: 0 15px
+  box-sizing: border-box
+  margin: 0
+  font-size: 16px
+  font-weight: normal
+
+  &:focus
+    outline: none
+
+.form-button
+  background-color: #458afd
+  border: none
+  border-radius: 0 5px 5px 0
+  height: 44px
+  width: 150px
+  color: #fff
+  font-weight: 500
+  font-size: 16px
+  cursor: pointer
+
+  &:hover
+    box-shadow: inset 0 0 0 1000px rgba(#000, 0.2)
+
+.footer
+  margin-top: auto
+  padding-bottom: 30px
+
+.footer-social
+  display: flex
+  align-items: center
+  margin-bottom: 35px
+
+.footer-social__link
+  text-decoration: none
+
+  &:not(:last-child)
+    margin-right: 40px
+
+  &:hover
+    text-decoration: none
+
+.footer-mail__link
+  color: #3e8cfe
+  font-weight: normal
+
+  &:hover
+    text-decoration: underline
+
+.popup-wrapper
+  background-color: rgba(#000, 0.4)
+  visibility: hidden
+  opacity: 0
+  transition: all 0.3s ease
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  padding: 15px
+  overflow: auto
+  box-sizing: border-box
+  display: flex
+
+  &.opened
+    opacity: 1
+    visibility: visible
+
+.popup
+  width: 100%
+  background-color: #fff
+  border-radius: 5px
+  margin: auto
+
+.mobile-menu__list
+  padding: 0
+  margin: 0
+
+.mobile-menu__item
+  margin: 0
+  list-style: none
+
+  &:not(:last-child)
+    border-bottom: 1px solid #ccc
+
+.mobile-menu__link
+  display: block
+  text-decoration: none
+  padding: 10px 15px
+  font-weight: 500
+  font-size: 20px
+  color: #000
+
+@media screen and (max-width: 767px)
+  .header__logo-soon
+    font-size: 14px
+    text-transform: capitalize
+    position: relative
+    top: 3px
+
+  .header__langs-list
+    display: none
+
+  .header-langs__mobile-active
+    font-weight: bold
+    font-size: 17px
+    padding-right: 15px
+    position: relative
+
+    &:after
+      display: block
+      position: absolute
+      right: 0
+      border: 4px solid transparent
+      border-top: 4px solid #fff
+      content: ''
+      top: 50%
+      margin-top: -2px
+
+  .form__field
+    flex-direction: column
+
+  .form-input
+    margin-bottom: 15px
+    border-radius: 5px
+    width: 100%
+    text-align: center
+
+  .form-button
+    width: 100%
+    border-radius: 5px
+    text-align: center
+
+  .content-area
+    padding-top: 0
+    padding-bottom: 35px
+    margin: 0
+
+  .header
+    padding: 20px 0 35px
+
+  .content-area__title
+    margin-bottom: 50px
+
+  .footer-social
+    overflow: auto
+    width: calc(100% + 30px)
+    //justify-content: center
+    box-sizing: border-box
+    margin-left: -15px
+    margin-right: -15px
+
+    & > *
+      &:first-child
+        margin-left: 15px
+
+      &:last-child
+        padding-right: 15px
+
+    &::-webkit-scrollbar
+      display: none
