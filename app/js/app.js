@@ -198,7 +198,7 @@ var YOURAPPNAME = function () {
 
             plugin.openPopup = function (popupName) {
                 plugin.reachPopups.filter('[data-popup="' + popupName + '"]').addClass('opened');
-                plugin.bodyEl.css('overflow-y', 'scroll');
+                // plugin.bodyEl.css('overflow-y', 'scroll');
                 // plugin.topPanelEl.css('padding-right', scrollSettings.width);
                 plugin.htmlEl.addClass('popup-opened');
             };
@@ -282,6 +282,7 @@ var YOURAPPNAME = function () {
     });
 
     app.appLoad('full', function (e) {
+        app.popups();
         $('.header-langs__mobile-active').on('click', function (e) {
             e.preventDefault();
             app.popups().openPopup('mobile-menu');
@@ -289,6 +290,12 @@ var YOURAPPNAME = function () {
 
         $(window).resize(function () {
             app.popups().closePopup('mobile-menu');
+        });
+
+        $('form').submit(function (e) {
+            e.preventDefault();
+
+            app.popups().openPopup('subscribed');
         });
     });
 })();

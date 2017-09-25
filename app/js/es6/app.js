@@ -179,7 +179,7 @@ class YOURAPPNAME {
 
         plugin.openPopup = function (popupName) {
             plugin.reachPopups.filter('[data-popup="' + popupName + '"]').addClass('opened');
-            plugin.bodyEl.css('overflow-y', 'scroll');
+            // plugin.bodyEl.css('overflow-y', 'scroll');
             // plugin.topPanelEl.css('padding-right', scrollSettings.width);
             plugin.htmlEl.addClass('popup-opened');
         };
@@ -261,6 +261,7 @@ class YOURAPPNAME {
     });
 
     app.appLoad('full', function (e) {
+      app.popups();
       $('.header-langs__mobile-active').on('click', function (e) {
         e.preventDefault();
         app.popups().openPopup('mobile-menu');
@@ -269,6 +270,12 @@ class YOURAPPNAME {
       $(window).resize(() => {
         app.popups().closePopup('mobile-menu');
       });
+
+      $('form').submit((e) => {
+          e.preventDefault();
+
+          app.popups().openPopup('subscribed');
+      })
     });
 
 })();
