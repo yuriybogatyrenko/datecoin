@@ -283,11 +283,11 @@ class YOURAPPNAME {
 
       app.popups().openPopup('subscribed');
     });
-    const planet = $('.planet');
+    const planet = $('.planet-image');
     $(document).mousemove(function (e) {
       // console.log(e.pageX, e.pageY);
-      const mt = -(e.pageY - $(document).height()) / 50;
-      const ml = -(e.pageX- $(document).width()) / 50;
+      const mt = -(e.pageY - $(document).height()) / 10;
+      const ml = -(e.pageX- $(document).width()) / 10;
       planet.css({marginTop: mt, marginLeft: ml});
     });
 

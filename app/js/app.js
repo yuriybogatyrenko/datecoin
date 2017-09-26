@@ -297,11 +297,11 @@ var YOURAPPNAME = function () {
 
       app.popups().openPopup('subscribed');
     });
-    var planet = $('.planet');
+    var planet = $('.planet-image');
     $(document).mousemove(function (e) {
       // console.log(e.pageX, e.pageY);
-      var mt = -(e.pageY - $(document).height()) / 50;
-      var ml = -(e.pageX - $(document).width()) / 50;
+      var mt = -(e.pageY - $(document).height()) / 10;
+      var ml = -(e.pageX - $(document).width()) / 10;
       planet.css({ marginTop: mt, marginLeft: ml });
     });
 
