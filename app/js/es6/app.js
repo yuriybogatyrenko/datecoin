@@ -286,8 +286,8 @@ class YOURAPPNAME {
     const planet = $('.planet-image');
     $(document).mousemove(function (e) {
       // console.log(e.pageX, e.pageY);
-      const mt = -(e.pageY - $(document).height()) / 10;
-      const ml = -(e.pageX- $(document).width()) / 10;
+      const mt = -(e.pageY - $(document).height()/2) / 10;
+      const ml = -(e.pageX- $(document).width()/2) / 10;
       planet.css({marginTop: mt, marginLeft: ml});
     });
 

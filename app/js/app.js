@@ -300,8 +300,8 @@ var YOURAPPNAME = function () {
     var planet = $('.planet-image');
     $(document).mousemove(function (e) {
       // console.log(e.pageX, e.pageY);
-      var mt = -(e.pageY - $(document).height()) / 10;
-      var ml = -(e.pageX - $(document).width()) / 10;
+      var mt = -(e.pageY - $(document).height() / 2) / 10;
+      var ml = -(e.pageX - $(document).width() / 2) / 10;
       planet.css({ marginTop: mt, marginLeft: ml });
     });
 
