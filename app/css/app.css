@@ -4808,7 +4808,7 @@ html.animation-coming .planet {
 }
 
 .app-wrapper {
-  height: 100%;
+  min-height: 100%;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -4829,6 +4829,11 @@ html.animation-coming .planet {
 }
 .app-wrapper .planet-image {
   transition: all 2s cubic-bezier(0.15, 0.95, 0.88, -0.34);
+  width: 614px;
+  height: 614px;
+  left: 50%;
+  top: 50%;
+  transform: translate(0, -50%);
   background: url(../images/main-background-image.png) no-repeat 90% center/614px auto;
 }
 
@@ -4961,12 +4966,15 @@ html.animation-coming .planet {
 
 .footer-social__link {
   text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
 }
 .footer-social__link:not(:last-child) {
   margin-right: 40px;
 }
 .footer-social__link:hover {
   text-decoration: none;
+  opacity: 0.5;
 }
 
 .footer-mail__link {
