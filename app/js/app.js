@@ -304,5 +304,9 @@ var YOURAPPNAME = function () {
       var ml = -(e.pageX - $(document).width()) / 50;
       planet.css({ marginTop: mt, marginLeft: ml });
     });
+
+    setTimeout(function () {
+      $('html').addClass('animation-coming');
+    }, 1000);
   });
 })();
