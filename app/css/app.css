@@ -4862,7 +4862,6 @@ html.animation-coming .planet {
   font-size: 17px;
   padding-right: 15px;
   position: relative;
-  margin-left: 40px;
 }
 .header-langs__mobile-active:after {
   display: block;
@@ -4877,7 +4876,7 @@ html.animation-coming .planet {
 
 .header__langs {
   position: relative;
-  margin-left: 20px;
+  margin-left: 40px;
 }
 .header__langs:hover .header__langs-list {
   opacity: 1;
@@ -5216,9 +5215,6 @@ html.animation-coming .planet {
   left: 50%;
   transition: all 0.3s ease;
   width: 0;
-}
-.header__menu-item:not(:last-child) {
-  margin-right: 15px;
 }
 .header__menu-item:hover:after {
   opacity: 1;
