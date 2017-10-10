@@ -4815,6 +4815,7 @@ html.animation-coming .planet {
   flex-direction: column;
   position: relative;
   overflow: hidden;
+  min-width: 320px;
 }
 .app-wrapper > * {
   position: relative;
